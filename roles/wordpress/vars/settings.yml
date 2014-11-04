@@ -1,0 +1,8 @@
+server_hostname: 'meadowlake.se'
+ubuntu_release: 'precise'
+#generate salted password example: python -c 'import crypt; print crypt.crypt("example_password", "$6$example_salt$")'
+#aric_password: '$6$example_salt$kvZmMpLOXy9vTRkBA2XgJbGs4Bafd6rRd6UlOxMO99/od33veNUd5jvLqAEJ5rT.tK8eyXrerI/aCV23OnCeJ0'
+aric_password: '$6$auehodoale843nnc$lT2cKDc0H94SwKX0EJkCtL3Jj3sJcRD3lZTAkc18DVHKkO5M4nWaZJklnx7TlTikw.JvWOBZPsWPimwdAoUco0'
+wordpress_db_name: wordpress
+wordpress_db_user: wordpress
+wordpress_mysql_user_passwd: picohjagforever
