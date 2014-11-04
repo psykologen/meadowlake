@@ -3,7 +3,7 @@
 #
 
 ---
-- hosts: wordpress
+- hosts: all
   sudo: yes
 
   vars_files:
@@ -28,7 +28,7 @@
       tags: vim
 
     - name: Create the .vim color directory.
-      action file state=directory path=/home/tomas/.vim/colors/
+      action: file state=directory path=/home/tomas/.vim/colors/
       tags: vim
 
     - name: Add vims dot file
