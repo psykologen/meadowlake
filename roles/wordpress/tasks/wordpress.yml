@@ -2,13 +2,6 @@
 # Ansible playbook for setting up a LAMP development server on Ubuntu 12.04.
 #
 
----
-- hosts: all
-  sudo: yes
-
-  vars_files:
-    - vars/settings.yml
-
   vars:
     wordpress_version: trunk
     php_memory_limit: 512M
