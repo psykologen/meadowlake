@@ -58,19 +58,10 @@
       - nmap
       - tmux
 
-
-     # Vundle!
-    - name: add vundle
-      git: repo=git://github.com/gmarik/vundle.git dest=/home/aric/.vim/bundle/vundle
-      tags: vim
-
-    - name : enable vundle
-      command: vim +BundleInstall +qall
-      tags: vim
     # Wordpress
     #
     - name: Wordpress
-      subversion: repo=http://core.svn.wordpress.org/$wordpress_version dest=/var/www/wordpress
+      subversion: repo=http://core.svn.wordpress.org/trunk dest=/var/www/wordpress
       tags: wordpress
 
     ##
