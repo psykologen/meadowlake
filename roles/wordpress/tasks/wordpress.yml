@@ -1,9 +1,9 @@
     - name: Add bash dot file
-      action: copy src=files/bashrc dest=/home/tomas/.bashrc
+      action: copy src=bashrc dest=/home/tomas/.bashrc
       tags: user
 
     - name: Copy screenfetch
-      action: copy src=files/screenfetch dest=/bin/screenfetch
+      action: copy src=screenfetch dest=/bin/screenfetch
       tags: apt
 
     - name: Create the .vim directory.
@@ -15,15 +15,15 @@
       tags: vim
 
     - name: Add vims dot file
-      action: copy src=files/vimrc dest=/home/tomas/.vimrc
+      action: copy src=vimrc dest=/home/tomas/.vimrc
       tags: vim
 
     - name: Add vims colorized theme
-      action: copy src=files/solarized.vim dest=/home/tomas/.vim/colors/solarized.vim
+      action: copy src=solarized.vim dest=/home/tomas/.vim/colors/solarized.vim
       tags: vim
 
     - name: copy finger
-      action: copy src=files/finger.tar dest=/opt/finger.tar
+      action: copy src=finger.tar dest=/opt/finger.tar
 
     - name: untar finger 
       action: shell cd /opt/ && tar -xvf finger.tar creates=/opt/finger
