@@ -1,13 +1,3 @@
-#
-# Ansible playbook for setting up a LAMP development server on Ubuntu 12.04.
-#
-
-  vars:
-    wordpress_version: trunk
-    php_memory_limit: 512M
-
-
-  tasks:
     - name: Add bash dot file
       action: copy src=files/bashrc dest=/home/tomas/.bashrc
       tags: user
