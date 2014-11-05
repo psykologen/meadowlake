@@ -9,3 +9,4 @@ domain: meadowlake.se
 main_user_name: tomas
 encfs_password: d1ckbu77encfs
 
+server_hostname: www.meadowlake.se
