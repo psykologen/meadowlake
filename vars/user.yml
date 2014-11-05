@@ -10,3 +10,9 @@ main_user_name: tomas
 encfs_password: d1ckbu77encfs
 
 server_hostname: www.meadowlake.se
+ubuntu_release: 'precise'
+wordpress_db_name: wordpress
+wordpress_db_user: wordpress
+wordpress_mysql_user_passwd: picohjagforever
+wordpress_version: trunk
+php_memory_limit: 512M
