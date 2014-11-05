@@ -74,7 +74,7 @@
       tags: wordpress
 
     - name: Add nginx config
-      action: template src=templates/nginx_conf.j2 dest=/etc/nginx/sites-enabled/wordpress owner=root group=root
+      action: template src=nginx_conf.j2 dest=/etc/nginx/sites-enabled/wordpress owner=root group=root
       tags: wordpress
 
     - name: Remove nginx default config
@@ -82,19 +82,19 @@
       tags: wordpress
 
     - name: Add varnish config
-      action: copy src=files/varnish_conf dest=/etc/varnish/default.vcl owner=root group=root
+      action: copy src=varnish_conf dest=/etc/varnish/default.vcl owner=root group=root
       tags: wordpress
 
     - name: Add varnish etc default config
-      action: copy src=files/varnish_default dest=/etc/default/varnish owner=root group=root
+      action: copy src=varnish_default dest=/etc/default/varnish owner=root group=root
       tags: wordpress
       
     - name: Wordpress MySQL database
-      mysql_db: db=$wordpress_db_name encoding=utf8 collation=utf8_general_ci state=present
+      mysql_db: db=meadowlake encoding=utf8 collation=utf8_general_ci state=present
       tags: wordpress
 
     - name: Wordpress MySQL user
-      mysql_user: name=$wordpress_db_user password=$wordpress_mysql_user_passwd priv=$wordpress_db_name.*:ALL state=present
+      mysql_user: name=meadowlake_user password=a87d7dhajkwh1bb1djk1 priv=meadowlake.*:ALL state=present
       tags: wordpress
 
     - name: Fetch random salts for Wordpress config
@@ -103,7 +103,7 @@
       tags: wordpress
 
     - name: Add wordpress config
-      action: template src=templates/wordpress_conf.j2 dest=/var/www/wordpress/wp-config.php owner=root group=root mode=0644
+      action: template src=wordpress_conf.j2 dest=/var/www/wordpress/wp-config.php owner=root group=root mode=0644
       tags: wordpress
 
     - name: Wordpress plugins
@@ -120,7 +120,7 @@
   #
  
     - name: Block tor exit nodes 
-      action: copy src=files/block_tor_exit_nodes dest=/etc/cron.daily/block_tor_exit_nodes
+      action: copy src=block_tor_exit_nodes dest=/etc/cron.daily/block_tor_exit_nodes
       tags: security
   ##
   # Restart services
